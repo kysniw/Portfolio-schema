@@ -129,8 +129,20 @@ section .btn:hover {
   box-shadow: 0px 20px 20px #0ef;
   max-width: 35vw;
   max-height: 70vh;
+  animation: floatImage 4s infinite;
 }
 
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .heading {
   text-align: center;
   font-size: 4.5rem;
@@ -330,5 +342,105 @@ section .btn:hover {
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .services {
+    padding-bottom: 7rem;
+  }
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+  .contact {
+    min-height: auto;
+  }
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 768px) {
+  .header .bx-menu {
+    display: block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: #1f242d;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    display: none;
+  }
+  .header .navbar.active {
+    display: block;
+  }
+  .header .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 4rem 0;
+  }
+  .home {
+    flex-direction: column-reverse;
+  }
+  .home h3 {
+    font-size: 2.6rem;
+  }
+  .home h1 {
+    font-size: 5rem;
+  }
+  .home-img img {
+    max-width: 70vw;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about img {
+    max-width: 70vw;
+  }
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 617px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+@media (max-width: 365px) {
+  .home-img img {
+    max-width: 90vw;
+  }
+  .about-img img {
+    max-width: 90vw;
+  }
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

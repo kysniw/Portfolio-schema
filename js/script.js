@@ -2,6 +2,9 @@ let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 let header = document.querySelector(".header");
 
+let navbar = document.querySelector(".navbar");
+let burgerBtn = document.querySelector(".header .bx-btn");
+
 console.log(document.querySelector("header").offsetHeight);
 
 window.onscroll = () => {
@@ -24,4 +27,14 @@ window.onscroll = () => {
   });
 
   header.classList.toggle("sticky", window.scrollY > 80);
+
+  burgerBtn.classList.remove("bx-x");
+  navbar.classList.remove("active");
 };
+
+const burgerBtnClick = () => {
+  burgerBtn.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
+
+burgerBtn.addEventListener("click", burgerBtnClick);
