@@ -5,8 +5,6 @@ let header = document.querySelector(".header");
 let navbar = document.querySelector(".navbar");
 let burgerBtn = document.querySelector(".header .bx-btn");
 
-console.log(document.querySelector("header").offsetHeight);
-
 window.onscroll = () => {
   sections.forEach((section) => {
     let top = window.scrollY;
@@ -26,7 +24,7 @@ window.onscroll = () => {
     }
   });
 
-  header.classList.toggle("sticky", window.scrollY > 80);
+  // header.classList.toggle("sticky", window.scrollY > 80);
 
   burgerBtn.classList.remove("bx-x");
   navbar.classList.remove("active");

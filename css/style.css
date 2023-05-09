@@ -51,7 +51,7 @@ section .btn:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   padding: 2rem 9%;
   background: #1f242d;
   display: flex;
@@ -356,9 +356,6 @@ section .btn:hover {
   }
   .portfolio {
     padding-bottom: 7rem;
-  }
-  .contact {
-    min-height: auto;
   }
   .footer {
     padding: 2rem 3%;
